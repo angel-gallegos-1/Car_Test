@@ -1,0 +1,21 @@
+--Make Test_framework a part of car submodule
+project Car_Test is
+   for Main use ("alarm_main.adb","starter_main.adb");
+   for Source_Dirs use ("test/alarm_test_framework","test/starter_test_framework","Ada_Test_Trace_Framework","Car_Impl_Ada");
+   for Object_Dir use "obj";
+
+   -- -g: includes debug info
+   -- -gnata: enables runtime checks
+   package Compiler is
+      for Default_Switches ("Ada") use ("-g", "-gnata");
+   end Compiler;
+
+   package Builder is
+       for Global_Configuration_Pragmas use "config.adc";
+   end Builder;
+
+   package Prove is
+      for Proof_Switches ("Ada") use ("-j0");
+   end Prove;
+
+end Car_Test;

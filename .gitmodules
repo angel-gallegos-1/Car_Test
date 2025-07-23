@@ -1,0 +1,7 @@
+
+[submodule "Car_Impl_Ada"]
+	path = Car_Impl_Ada
+	url = https://github.com/angel-gallegos-1/Car_Impl_Ada.git
+[submodule "Ada_Test_Trace_Framework"]
+	path = Ada_Test_Trace_Framework
+	url = https://github.com/angel-gallegos-1/Ada_Test_Trace_Framework.git
